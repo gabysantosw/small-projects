@@ -1,0 +1,90 @@
+/* RESET */
+html, body {
+  margin: 0;
+  font-size: 10px;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+/* VARIABLES */
+:root {
+  /* colors */
+  --dark: hsl(0, 0%, 20%);
+  --light: hsl(0, 0%, 95%);
+  --light-d: hsl(0, 0%, 25%);
+
+  /* spacing */
+  --x1: 8px;
+  --x2: 16px;
+}
+
+/* UTILITIES */
+.h1 {
+  font-size: 1.4rem;
+}
+
+.h2 {
+  margin-bottom: var(--x1);
+  font-size: 1.2rem;
+}
+
+.button {
+  padding: var(--x1) var(--x2);
+  border: none;
+  border-radius: 10rem;
+}
+.button:hover{
+  opacity: 0.8;
+  cursor: pointer;
+}
+
+.input {
+  margin-right: var(--x1);
+  padding: var(--x1) var(--x2);
+}
+
+/* BASICS */
+.body {
+  background-color: var(--dark);
+  color: var(--light);
+  font-family: sans-serif;
+}
+
+.inner-body {
+  padding: var(--x2);
+  font-size: 1.6rem;
+}
+
+.section:not(:last-child) {
+  margin-bottom: var(--x2);
+}
+.inner-section:not(:last-child) {
+  margin-bottom: var(--x1);
+}
+
+.add {
+}
+
+.add__controls {
+  display: flex;
+}
+
+.add__description {
+  flex: 1;
+}
+
+.concept {
+  padding: var(--x2);
+  border-radius: 1rem;
+  background-color: var(--light-d);
+}
+
+.concept__title {
+  font-family: monospace;
+}
+
+.concept__description {
+
+}
