@@ -46,4 +46,4 @@ function Concept(concept, description, language, certificate, section){
   this.section = section;
 }
 
-let data = [{"concept":"asdf","description":"asdfffffffff"},{"concept":"qwer","description":"qwerrrrrrrr"}];
+let data = [{"concept":"string.length","description":"returns the array's last filled index + 1"},{"concept":"array.push(element)","description":"appends element to the end of the array"},{"concept":"array.pop()","description":"removes last element of the array and returns it"},{"concept":"array.unshift(element)","description":"appends element to the start of the array"},{"concept":"array.shift()","description":"removes first element of the array and returns it"},{"concept":"console.log(value)","description":"prints value in the console"},{"concept":"typeof(value)","description":"returns the data type of the given value"}];
