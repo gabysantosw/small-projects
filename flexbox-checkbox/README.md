@@ -3,6 +3,7 @@
 ## Todo
 
 - favicon
+- reduce padding, instead use center
 
 
 ## Notes
