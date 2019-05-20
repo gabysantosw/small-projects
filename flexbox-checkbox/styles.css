@@ -1,6 +1,7 @@
 /* VARIABLES */
 :root {
   /* colors */
+  --logo: hsl(210, 50%, 30%);
   --light: hsl(210, 50%, 100%);
   --l-gray: hsl(210, 30%, 90%);
   --gray: hsl(210, 10%, 70%);
@@ -18,12 +19,17 @@
   --half: 4px;
   --x1: 8px;
   --x2: 16px;
+  --x4: 32px;
 }
 
 /* RESETS */
 html, body {
   margin: 0;
   font-size: 10px;
+}
+
+h1 {
+  margin: 0;
 }
 
 
@@ -46,6 +52,50 @@ html, body {
   font-size: 1.4rem;
   font-weight: lighter;
   line-height: 1.8rem;
+}
+
+/* LOGO */
+
+.logo {
+  margin: .2rem 2.5rem;
+  border: .2rem solid var(--logo);
+  font-family: sans-serif;
+  font-size: 2.8rem;
+}
+.logo-flexbox {
+  padding: var(--half) var(--x2);
+  background-color: var(--logo);
+  color: var(--light);
+  letter-spacing: .5rem;
+  display: inline-block;
+  position: relative;
+}
+.logo-flexbox::before {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  border: .2rem solid var(--logo);
+  top: 1.8rem;
+  left: -1.4rem;
+}
+.logo-checkbox {
+  padding: var(--half) var(--x2) var(--half) .2rem;
+  color: var(--logo);
+  letter-spacing: -.1rem;
+  display: inline-block;
+  position: relative;
+}
+.logo-checkbox::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--logo);
+  top: -.2rem;
+  right: -2rem;
 }
 
 /* UTILITY */
@@ -75,6 +125,18 @@ html, body {
   content: '▲';
 }
 
+.nav {
+  padding: var(--x1) var(--x2);
+  background-color: var(--logo);
+  color: var(--light);
+  font-family: sans-serif;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+.nav:hover {
+  background-color: var(--dark);
+}
 
 /* BASICS */
 .body {
@@ -85,10 +147,40 @@ html, body {
   align-items: center;
 }
 
+.header {
+  width: 100%;
+  box-sizing: border-box;
+  padding: var(--x2) var(--x4);
+  border-bottom: .3rem solid var(--logo);
+  background-color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__links {
+
+}
+.header__link {
+  text-decoration: none;
+}
+.header__link:not(:last-child) {
+  margin-right: var(--x2);
+}
+
 .deck {
   max-width: 1630px;
   box-sizing: border-box;
   padding: var(--half);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.main__heading {
+  margin: var(--x2) 0;
+  color: var(--dark);
+  text-transform: uppercase;
 }
 
 .deck-section {
