@@ -1,7 +1,7 @@
 /* VARIABLES */
 :root {
   /* colors */
-  --logo: hsl(210, 50%, 30%);
+  --logo: hsl(210, 20%, 25%);
   --light: hsl(210, 50%, 100%);
   --l-gray: hsl(210, 30%, 90%);
   --gray: hsl(210, 10%, 70%);
@@ -12,7 +12,7 @@
   --blue: hsl(210, 50%, 70%);
   --orange: hsl(30, 50%, 70%);
   --green: hsl(90, 50%, 70%);
-  --pink: hsl(0, 50%, 70%);
+  --pink: hsl(0, 50%, 75%);
   --yellow: hsl(60, 50%, 70%);
 
   /* spacing */
@@ -57,14 +57,17 @@ h1 {
 /* LOGO */
 
 .logo {
-  margin: .2rem 2.5rem;
-  border: .2rem solid var(--logo);
+  width: 200px;
+  background-color: red;
+  margin: 2px 15px;
+  border: 2px solid var(--logo);
+  background-image: linear-gradient(to right, var(--logo) 55%, var(--light) 55%);
   font-family: sans-serif;
-  font-size: 2.8rem;
+  font-size: 1.8rem;
 }
 .logo-flexbox {
-  padding: var(--half) var(--x2);
-  background-color: var(--logo);
+  padding: 2px 2px 2px 4px;
+  /* background-color: var(--logo); */
   color: var(--light);
   letter-spacing: .5rem;
   display: inline-block;
@@ -74,14 +77,15 @@ h1 {
   content: '';
   display: inline-block;
   position: absolute;
-  height: 2rem;
-  width: 2rem;
-  border: .2rem solid var(--logo);
-  top: 1.8rem;
-  left: -1.4rem;
+  height: 10px;
+  width: 10px;
+  border: 2px solid var(--logo);
+  bottom: -2px;
+  left: -14px;
 }
 .logo-checkbox {
-  padding: var(--half) var(--x2) var(--half) .2rem;
+  /* padding: var(--half) var(--x2) var(--half) .2rem; */
+  padding: 2px 4px 2px 2px;
   color: var(--logo);
   letter-spacing: -.1rem;
   display: inline-block;
@@ -91,11 +95,11 @@ h1 {
   content: '';
   display: inline-block;
   position: absolute;
-  height: 2rem;
-  width: 2rem;
+  height: 16px;
+  width: 16px;
   background-color: var(--logo);
-  top: -.2rem;
-  right: -2rem;
+  top: -2px;
+  right: -18px;
 }
 
 /* UTILITY */
@@ -130,7 +134,7 @@ h1 {
   background-color: var(--logo);
   color: var(--light);
   font-family: sans-serif;
-  font-size: 1.8rem;
+  font-size: 0.9rem;
   text-transform: uppercase;
   letter-spacing: .2rem;
 }
@@ -154,12 +158,13 @@ h1 {
   border-bottom: .3rem solid var(--logo);
   background-color: var(--light);
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
 
 .header__links {
-
+  margin: 2rem 0;
 }
 .header__link {
   text-decoration: none;
@@ -222,7 +227,8 @@ h1 {
 }
 
 .item {
-	padding: var(--half) var(--x2);
+  width: 45px;
+	padding: var(--half);
 	color: var(--o-dark);
 	display: inline-block;
   user-select: none;
@@ -300,7 +306,7 @@ h1 {
 }
 
 .item-3-bg {
-	background-color: var(--orange);
+	background-color: var(--green);
 }
 
 .item-4-bg {
@@ -354,4 +360,70 @@ h1 {
 }
 .wrap-reverse {
   flex-wrap: wrap-reverse;
+}
+
+.align-stretch {
+  align-items: stretch;
+}
+.align-start {
+  align-items: flex-start;
+}
+.align-end {
+  align-items: flex-end;
+}
+.align-center {
+  align-items: center;
+}
+.align-baseline {
+  align-items: baseline;
+}
+
+.self-stretch {
+  align-self: stretch;
+}
+.self-start {
+  align-self: flex-start;
+}
+.self-end {
+  align-self: flex-end;
+}
+.self-center {
+  align-self: center;
+}
+.self-baseline {
+  align-self: baseline;
+}
+
+.grow-0 {
+  flex-grow: 0;
+}
+.grow-1 {
+  flex-grow: 1;
+}
+.grow-2 {
+  flex-grow: 2;
+}
+
+.shrink-0 {
+  flex-shrink: 0;
+}
+.shrink-1 {
+  flex-shrink: 1;
+}
+.shrink-2 {
+  flex-shrink: 2;
+}
+.w60 {
+  width: 250px;
+}
+
+.basis-0 {
+  flex-basis: 0;
+}
+.basis-60 {
+  flex-basis: 70px;
+}
+.basis-2 {
+  flex-basis: 50%;
+  flex-shrink: 0;
 }

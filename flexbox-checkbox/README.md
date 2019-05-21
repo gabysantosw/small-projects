@@ -4,7 +4,9 @@
 
 - favicon
 - reduce padding, instead use center
-
+- make it responsive, see article of flexbox zombies creator
+- order
+- add the shortcuts: flex and flex-flow
 
 ## Notes
 - default
@@ -18,6 +20,8 @@
 - flex-basis
 - order
 - flex-wrap
+- flex
+- flex-flow
 
 ## Basic card
 

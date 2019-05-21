@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="" description="">
+  <link rel="stylesheet" href="styles.css">
+  <title>Flexbox Checkbox - Cheatsheet</title>
+</head>
+
+<body class="body t-basic">
+
+  <header class="header">
+    <h1 class="header__logo logo">
+      <span class="logo-flexbox">Flexbox</span> <span class="logo-checkbox">Checkbox</span>
+    </h1>
+    <nav class="header__links">
+      <a class="header__link nav" href="#">Playground</a>
+      <a class="header__link nav" href="#">Cheatsheet</a>
+    </nav>
+  </header>
+
+  <main class="deck t-basic">
+    <h1 class="main__heading t-heading">Flexbox Cheatsheet</h1>
+
+    <section class="deck-section">
+      <input id="deck-section-1" class="input" type="checkbox" unchecked>
+      <label for="deck-section-1" class="deck-section__heading t-heading label">Display: flex</label>
+      <div role="toggle" class="deck-content">
+
+        <div class="card">
+          <div class="container">
+            <div class="item-1 item">
+              1
+            </div>
+            <div class="item-2 item">
+              2
+            </div>
+            <div class="item-3 item">
+              3
+            </div>
+            <div class="item-4 item">
+              4
+            </div>
+            <div class="item-5 item">
+              5
+            </div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="comment">/* default, no flexbox
+                items have display: inline-block
+                for simplicity */</span>
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card">
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;<span class="new">display: flex;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+      </div> <!-- deck-content end -->
+    </section> <!-- deck-section end -->
+
+    <section class="deck-section">
+      <input id="deck-section-2" class="input" type="checkbox" unchecked>
+      <label for="deck-section-2" class="deck-section__heading t-heading label">Flex-direction</label>
+      <div role="toggle" class="deck-content">
+
+        <div class="card">
+          <div class="container flex row">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <span class="default">default</span>
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">flex-direction: row;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card">
+          <div class="container flex column">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">flex-direction: column;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card">
+          <div class="container flex row-reverse">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">flex-direction: row-reverse;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card">
+          <div class="container flex column-reverse">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">flex-direction: column-reverse;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+      </div> <!-- deck-content end -->
+    </section> <!-- deck-section end -->
+
+    <section class="deck-section">
+      <input id="deck-section-4" class="input" type="checkbox" unchecked>
+      <label for="deck-section-4" class="deck-section__heading t-heading label">Flex-wrap</label>
+      <div role="toggle" class="deck-content">
+
+        <div class="card">
+          <div class="container flex nowrap">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">flex-wrap: nowrap;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card">
+          <div class="container flex wrap">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+            <div class="item-1 item">6</div>
+            <div class="item-2 item">7</div>
+            <div class="item-3 item">8</div>
+            <div class="item-4 item">9</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">flex-wrap: wrap;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card">
+          <div class="container flex wrap-reverse">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+            <div class="item-1 item">6</div>
+            <div class="item-2 item">7</div>
+            <div class="item-3 item">8</div>
+            <div class="item-4 item">9</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">flex-wrap: wrap-reverse;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+      </div> <!-- deck-content end -->
+    </section> <!-- deck-section end -->
+
+    <section class="deck-section">
+      <input id="deck-section-3" class="input" type="checkbox" unchecked>
+      <label for="deck-section-3" class="deck-section__heading t-heading label">Justify-content</label>
+      <div role="toggle" class="deck-content">
+
+        <div class="card">
+          <div class="container flex justify-start">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <span class="default">default</span>
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">justify-content: flex-start;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card">
+          <div class="container flex justify-end">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">justify-content: flex-end;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card">
+          <div class="container flex justify-center">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">justify-content: center;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card">
+          <div class="container flex justify-around">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">justify-content: space-around;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card">
+          <div class="container flex justify-between">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">justify-content: space-between;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+      </div> <!-- deck-content end -->
+    </section> <!-- deck-section end -->
+
+    <section class="deck-section">
+      <input id="deck-section-5" class="input" type="checkbox" unchecked>
+      <label for="deck-section-5" class="deck-section__heading t-heading label">Align-items</label>
+      <div role="toggle" class="deck-content">
+
+        <div class="card">
+          <div class="container flex align-stretch">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <span class="default">default</span>
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">align-items: stretch;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex align-start">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">align-items: flex-start;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex align-end">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">align-items: flex-end;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex align-center">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">align-items: flex-center;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex align-baseline">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              &nbsp;&nbsp;<span class="new">align-items: baseline;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+      </div> <!-- deck-content end -->
+    </section> <!-- deck-section end -->
+
+    <section class="deck-section">
+      <input id="deck-section-6" class="input" type="checkbox" unchecked>
+      <label for="deck-section-6" class="deck-section__heading t-heading label">Align-self</label>
+      <div role="toggle" class="deck-content">
+
+        <div class="card">
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item self-stretch">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <span class="default">default</span>
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">align-self: stretch;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item self-start">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">align-self: flex-start;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item self-end">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">align-self: flex-end;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item self-center">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">align-self: center;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item self-baseline">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">align-self: baseline;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+      </div> <!-- deck-content end -->
+    </section> <!-- deck-section end -->
+
+    <section class="deck-section">
+      <input id="deck-section-7" class="input" type="checkbox" unchecked>
+      <label for="deck-section-7" class="deck-section__heading t-heading label">Flex-grow</label>
+      <div role="toggle" class="deck-content">
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item grow-0">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <span class="default">default</span>
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-grow: 0;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item grow-1">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-grow: 1;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item grow-1">3</div>
+            <div class="item-4 item grow-2">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-grow: 1;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item grow-1">3</div>
+            <div class="item-4 item grow-2">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-grow: 1;</span> <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-4-bg bg">.item-4</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-grow: 2;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item grow-1">2</div>
+            <div class="item-3 item grow-1">3</div>
+            <div class="item-4 item grow-2">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-2-bg bg">.item-2</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-grow: 1;</span> <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-grow: 1;</span> <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-4-bg bg">.item-4</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-grow: 2;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+      </div> <!-- deck-content end -->
+    </section> <!-- deck-section end -->
+
+    <section class="deck-section"> <!-- deck-section start -->
+      <input id="deck-section-8" class="input" type="checkbox" unchecked>
+      <label for="deck-section-8" class="deck-section__heading t-heading label">Flex-shrink</label>
+      <div role="toggle" class="deck-content"> <!-- deck-content start -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item shrink-1">3</div>
+            <div class="item-4 item w60">4</div>
+            <div class="item-5 item">5</div>
+            <div class="item-1 item">6</div>
+          </div>
+
+          <div class="code">
+            <span class="default">default</span>
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-shrink: 1;</span> <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-4-bg bg">.item-4</span> { <br>
+              &nbsp;&nbsp;width: 250px; <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item shrink-2">3</div>
+            <div class="item-4 item w60">4</div>
+            <div class="item-5 item">5</div>
+            <div class="item-1 item">6</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-shrink: 2;</span> <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-4-bg bg">.item-4</span> { <br>
+              &nbsp;&nbsp;width: 250px; <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item shrink-0">3</div>
+            <div class="item-4 item w60">4</div>
+            <div class="item-5 item">5</div>
+            <div class="item-1 item">6</div>
+          </div>
+
+          <div class="code">
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-shrink: 0;</span> <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-4-bg bg">.item-4</span> { <br>
+              &nbsp;&nbsp;width: 250px; <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+      </div> <!-- deck-content end -->
+    </section> <!-- deck-section end -->
+
+    <section class="deck-section"> <!-- deck-section start -->
+      <input id="deck-section-" class="input" type="checkbox" unchecked>
+      <label for="deck-section-" class="deck-section__heading t-heading label">Flex-basis</label>
+      <div role="toggle" class="deck-content"> <!-- deck-content start -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item basis-0">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <span class="default">default</span>
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;<span class="new">display: flex;</span> <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-basis: 0;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item basis-60">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <span class="default">default</span>
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;<span class="new">display: flex;</span> <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;<span class="new">flex-basis: 70px;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item basis-2">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <span class="default">default</span>
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;display: flex; <br>
+              }
+            </div>
+            <div class="code-section t-code">
+              <span class="item-3-bg bg">.item-3</span> { <br>
+              &nbsp;&nbsp;flex-shrink: 0; <br>
+              &nbsp;&nbsp;<span class="new">flex-basis: 50%;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+      </div> <!-- deck-content end -->
+    </section> <!-- deck-section end -->
+
+
+    <section class="deck-section"> <!-- deck-section start -->
+      <input id="deck-section-" class="input" type="checkbox" unchecked>
+      <label for="deck-section-" class="deck-section__heading t-heading label">def</label>
+      <div role="toggle" class="deck-content"> <!-- deck-content start -->
+
+        <div class="card"> <!-- card start -->
+          <div class="container flex">
+            <div class="item-1 item">1</div>
+            <div class="item-2 item">2</div>
+            <div class="item-3 item">3</div>
+            <div class="item-4 item">4</div>
+            <div class="item-5 item">5</div>
+          </div>
+
+          <div class="code">
+            <span class="default">default</span>
+            <div class="code-section t-code">
+              <span class="container-bg bg">.container</span> { <br>
+              &nbsp;&nbsp;<span class="new">display: flex;</span> <br>
+              }
+            </div>
+          </div>
+        </div> <!-- card end -->
+
+      </div> <!-- deck-content end -->
+    </section> <!-- deck-section end -->
+
+  </main> <!-- deck end -->
+
+  <script src="script.js"></script>
+</body>
+
+</html>
