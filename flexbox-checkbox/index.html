@@ -7,6 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="" description="">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="playground-styles.css">
   <title>Flexbox Checkbox - Cheatsheet</title>
 </head>
 
@@ -26,19 +27,30 @@
     <h1 class="main__heading t-heading">Flexbox Playground</h1>
 
     <section class="display">
-      <div class="container">
+      <div class="display__container">
         <div class="item-1 item">1</div>
       </div>
     </section>
 
     <section class="controls">
-      <input id="flex" type="checkbox">
-      <label for="flex">Checkbox</label>
+      <div class="controls__container">
+        <div class="control-item container-bg bg">.container</div>
+
+        <input id="display" class="input-property" name="" value="" type="checkbox">
+        <label class="label-property" for="display">Display</label>
+        <span class="separator">:</span>
+        <input id="flex" class="input-value" name="" value="" type="checkbox">
+        <label class="label-value" for="flex">flex</label>
+        <span class="separator">;</span>
+        <br>
+        <input id="wrap" class="input-property" name="" value="" type="checkbox">
+        <label class="label-property" for="wrap">Display:</label>
+      </div>
     </section>
 
   </main>
 
-  <script src="script.js"></script>
+  <script src="playground-script.js"></script>
 </body>
 
 </html>

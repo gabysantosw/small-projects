@@ -32,6 +32,10 @@ h1 {
   margin: 0;
 }
 
+input {
+  margin: 0;
+}
+
 
 /* TYPOGRAPHY */
 
@@ -427,5 +431,3 @@ h1 {
   flex-basis: 50%;
   flex-shrink: 0;
 }
-
-/* PLAYGROUND */
