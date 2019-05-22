@@ -7,6 +7,11 @@
 - make it responsive, see article of flexbox zombies creator
 - order
 - add the shortcuts: flex and flex-flow
+- add sections: container, children and shortcutsqa
+- add resources at bottom
+
+## Resources
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 
 ## Notes
 - default
