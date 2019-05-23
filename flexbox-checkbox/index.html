@@ -27,24 +27,36 @@
     <h1 class="main__heading t-heading">Flexbox Playground</h1>
 
     <section class="display">
-      <div class="display__container">
+      <div id="container" class="display__container">
         <div class="item-1 item">1</div>
+        <div class="item-2 item">2</div>
+        <div class="item-3 item">3</div>
+        <div class="item-4 item">4</div>
+        <div class="item-5 item">5</div>
       </div>
     </section>
 
     <section class="controls">
-      <div class="controls__container">
-        <div class="control-item container-bg bg">.container</div>
-
-        <input id="display" class="input-property" name="" value="" type="checkbox">
-        <label class="label-property" for="display">Display</label>
-        <span class="separator">:</span>
-        <input id="flex" class="input-value" name="" value="" type="checkbox">
-        <label class="label-value" for="flex">flex</label>
-        <span class="separator">;</span>
+      <div class="controls__container t-controls">
+        <div class="control-item container-bg bg">.container</div><span class="separator">{</span>
         <br>
-        <input id="wrap" class="input-property" name="" value="" type="checkbox">
-        <label class="label-property" for="wrap">Display:</label>
+        <input id="display" class="input-property" type="checkbox">
+        <label class="label-property" for="display">Display</label><span class="separator">:</span>
+        <input id="flex" class="input-value" type="checkbox">
+        <label class="label-value" for="flex">flex</label><span class="separator">;</span>
+        <br>
+        <input id="flex-direction" class="input-property" type="checkbox">
+        <label class="label-property" for="flex-direction">Flex-direction</label><span class="separator">:</span>
+        <input id="row" class="input-value" type="radio" name="direction">
+        <label class="label-value" for="row">row</label>
+        <input id="column" class="input-value" type="radio" name="direction">
+        <label class="label-value" for="column">column</label>
+        <input id="row-reverse" class="input-value" type="radio" name="direction">
+        <label class="label-value" for="row-reverse">row-reverse</label>
+        <input id="column-reverse" class="input-value" type="radio" name="direction">
+        <label class="label-value" for="column-reverse">column-reverse</label><span class="separator">;</span>
+        <br>
+        <span class="separator-last separator">}</span>
       </div>
     </section>
 
