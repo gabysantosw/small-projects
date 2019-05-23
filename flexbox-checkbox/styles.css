@@ -234,7 +234,7 @@ input {
   width: 45px;
 	padding: var(--half);
 	color: var(--o-dark);
-	display: inline-block;
+	display: block;
   user-select: none;
 }
 

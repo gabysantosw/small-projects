@@ -9,6 +9,7 @@
 - add the shortcuts: flex and flex-flow
 - add sections: container, children and shortcutsqa
 - add resources at bottom
+- make a 'if flexDirection.checked' then go on normally, if not, check -> this allows to activate elements by simply pressing the value, one click less if desired
 
 ## Resources
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
