@@ -28,13 +28,24 @@
 
     <section class="display">
       <div id="container" class="display__container">
-        <div class="item-1 item">1</div>
-        
+        <div id="item-1" class="item-1 item">1</div>
+        <div id="item-2" class="item-2 item">2</div>
+        <div id="item-3" class="item-3 item">3</div>
+        <div id="item-4" class="item-4 item">4</div>
       </div>
     </section>
 
     <section class="controls">
       <div class="controls__container t-controls">
+        <div class="controls__selector">
+          <div class="control-item item-1-bg bg">.1-setup</div>
+          <div class="separator">{</div>
+        </div>
+
+        <div class="controls__selector">
+          <div class="separator">}</div>
+        </div>
+
         <div class="controls__selector">
           <div class="control-item container-bg bg">.container</div>
           <div class="separator">{</div>
@@ -112,6 +123,31 @@
           <label class="label-value" for="align-center">center</label>
           <input id="align-baseline" class="input-value" type="radio">
           <label class="label-value" for="align-baseline">baseline</label>
+          <div class="separator">;</div>
+        </div>
+
+        <div class="controls__selector">
+          <div class="separator">}</div>
+        </div>
+
+        <div class="controls__selector">
+          <div class="control-item item-1-bg bg">.item-1</div>
+          <div class="separator">{</div>
+        </div>
+
+        <div class="controls__property">
+          <input id="flex-grow" class="input-property" type="checkbox">
+          <label class="label-property" for="flex-grow">flex-grow</label>
+          <div class="separator">:</div>
+
+          <input id="grow-0" class="input-value" data-item="1" type="radio">
+          <label class="label-value" for="grow-0">0</label>
+          <input id="grow-1" class="input-value" data-item="1" type="radio">
+          <label class="label-value" for="grow-1">1</label>
+          <input id="grow-2" class="input-value" data-item="1" type="radio">
+          <label class="label-value" for="grow-2">2</label>
+          <input id="grow-3" class="input-value" data-item="1" type="radio">
+          <label class="label-value" for="grow-3">3</label>
           <div class="separator">;</div>
         </div>
 

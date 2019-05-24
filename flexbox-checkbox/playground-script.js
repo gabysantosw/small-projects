@@ -9,7 +9,8 @@ window.onload = function(){
 }
 
 // DISPLAY
-const container = document.getElementById('container')
+const container = document.getElementById('container');
+const item1 = document.getElementById('item-1');
 
 // CONTROLS
 const display = document.getElementById('display');
@@ -193,6 +194,7 @@ justifyAround.addEventListener('change', setJustifyContent);
 justifyBetween.addEventListener('change', setJustifyContent);
 
 function setJustifyContent() {
+  console.log(this.name);
   if (this.checked) {
     // activate display flex if unchecked
     checkDisplay();
@@ -327,6 +329,77 @@ function setAlignItems() {
   }
 }
 
+const flexGrow = document.getElementById('flex-grow');
+const grow0 = document.getElementById('grow-0');
+const grow1 = document.getElementById('grow-1');
+const grow2 = document.getElementById('grow-2');
+const grow3 = document.getElementById('grow-3');
+
+flexGrow.addEventListener('change', setFlexGrow);
+grow0.addEventListener('change', setFlexGrow);
+grow1.addEventListener('change', setFlexGrow);
+grow2.addEventListener('change', setFlexGrow);
+grow3.addEventListener('change', setFlexGrow);
+
+function setFlexGrow() {
+  if (this.checked) {
+    // activate display flex if unchecked
+    checkDisplay();
+
+    // if target is the property, check default value
+    if (this.id == 'flex-grow') {
+      grow0.checked = true;
+      grow0.dispatchEvent(new Event('change'));
+    }
+    // if target is a value, activate
+    if (this.id == 'grow-0' || this.id == 'grow-1' || this.id == 'grow-2' || this.id == 'grow-3') {
+      // activate property if unchecked
+      if (flexGrow.checked == false) {
+        flexGrow.checked = true;
+      }
+
+      // activate value
+      item1.classList.add(this.id);
+
+      // trigger events to deactivate others
+      if (this.id != 'grow-0') {
+        grow0.checked = false;
+        grow0.dispatchEvent(new Event('change'));
+      }
+      if (this.id != 'grow-1') {
+        grow1.checked = false;
+        grow1.dispatchEvent(new Event('change'));
+      }
+      if (this.id != 'grow-2') {
+        grow2.checked = false;
+        grow2.dispatchEvent(new Event('change'));
+      }
+      if (this.id != 'grow-3') {
+        grow3.checked = false;
+        grow3.dispatchEvent(new Event('change'));
+      }
+    }
+  } else {
+    // if target is the property, remove values
+    if (this.id == 'flex-grow') {
+      grow0.checked = false;
+      grow0.dispatchEvent(new Event('change'));
+      grow1.checked = false;
+      grow1.dispatchEvent(new Event('change'));
+      grow2.checked = false;
+      grow2.dispatchEvent(new Event('change'));
+      grow3.checked = false;
+      grow3.dispatchEvent(new Event('change'));
+    }
+
+    // if target is a value, remove it
+    if (this.id == 'grow-0' || this.id == 'grow-1' || this.id == 'grow-2' || this.id == 'grow-3') {
+      item1.classList.remove(this.id);
+    }
+  }
+}
+
+
 // UTILITY FUNCTIONS
 function checkDisplay() {
   if (flex.checked == false) {
@@ -337,6 +410,6 @@ function checkDisplay() {
 
 function toCamelCase(string) {
   return string.replace(/([-_][a-z])/ig, match => {
-    return match.toUpperCase().replace('-', '')
+    return match.toUpperCase().replace('-', '');
   });
 }
