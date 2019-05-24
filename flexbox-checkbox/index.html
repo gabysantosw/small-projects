@@ -29,34 +29,96 @@
     <section class="display">
       <div id="container" class="display__container">
         <div class="item-1 item">1</div>
-        <div class="item-2 item">2</div>
-        <div class="item-3 item">3</div>
-        <div class="item-4 item">4</div>
-        <div class="item-5 item">5</div>
+        
       </div>
     </section>
 
     <section class="controls">
       <div class="controls__container t-controls">
-        <div class="control-item container-bg bg">.container</div><span class="separator">{</span>
-        <br>
-        <input id="display" class="input-property" type="checkbox">
-        <label class="label-property" for="display">Display</label><span class="separator">:</span>
-        <input id="flex" class="input-value" type="checkbox">
-        <label class="label-value" for="flex">flex</label><span class="separator">;</span>
-        <br>
-        <input id="flex-direction" class="input-property" type="checkbox">
-        <label class="label-property" for="flex-direction">Flex-direction</label><span class="separator">:</span>
-        <input id="row" class="input-value" type="radio" name="direction">
-        <label class="label-value" for="row">row</label>
-        <input id="column" class="input-value" type="radio" name="direction">
-        <label class="label-value" for="column">column</label>
-        <input id="row-reverse" class="input-value" type="radio" name="direction">
-        <label class="label-value" for="row-reverse">row-reverse</label>
-        <input id="column-reverse" class="input-value" type="radio" name="direction">
-        <label class="label-value" for="column-reverse">column-reverse</label><span class="separator">;</span>
-        <br>
-        <span class="separator-last separator">}</span>
+        <div class="controls__selector">
+          <div class="control-item container-bg bg">.container</div>
+          <div class="separator">{</div>
+        </div>
+
+        <div class="controls__property">
+          <input id="display" class="input-property" type="checkbox">
+          <label class="label-property" for="display">display</label>
+          <div class="separator">:</div>
+
+          <input id="flex" class="input-value" type="checkbox">
+          <label class="label-value" for="flex">flex</label><div class="separator">;</div>
+        </div>
+
+        <div class="controls__property">
+          <input id="flex-direction" class="input-property" type="checkbox">
+          <label class="label-property" for="flex-direction">flex-direction</label>
+          <div class="separator">:</div>
+
+          <input id="row" class="input-value" type="radio">
+          <label class="label-value" for="row">row</label>
+          <input id="column" class="input-value" type="radio">
+          <label class="label-value" for="column">column</label>
+          <input id="row-reverse" class="input-value" type="radio">
+          <label class="label-value" for="row-reverse">row-reverse</label>
+          <input id="column-reverse" class="input-value" type="radio">
+          <label class="label-value" for="column-reverse">column-reverse</label>
+          <div class="separator">;</div>
+        </div>
+
+        <div class="controls__property">
+          <input id="flex-wrap" class="input-property" type="checkbox">
+          <label class="label-property" for="flex-wrap">flex-wrap</label>
+          <div class="separator">:</div>
+
+          <input id="nowrap" class="input-value" type="radio">
+          <label class="label-value" for="nowrap">nowrap</label>
+          <input id="wrap" class="input-value" type="radio">
+          <label class="label-value" for="wrap">wrap</label>
+          <input id="wrap-reverse" class="input-value" type="radio">
+          <label class="label-value" for="wrap-reverse">wrap-reverse</label>
+          <div class="separator">;</div>
+        </div>
+
+        <div class="controls__property">
+          <input id="justify-content" class="input-property" type="checkbox">
+          <label class="label-property" for="justify-content">justify-content</label>
+          <div class="separator">:</div>
+
+          <input id="justify-start" class="input-value" type="radio">
+          <label class="label-value" for="justify-start">flex-start</label>
+          <input id="justify-end" class="input-value" type="radio">
+          <label class="label-value" for="justify-end">flex-end</label>
+          <input id="justify-center" class="input-value" type="radio">
+          <label class="label-value" for="justify-center">center</label>
+          <input id="justify-around" class="input-value" type="radio">
+          <label class="label-value" for="justify-around">space-around</label>
+          <input id="justify-between" class="input-value" type="radio">
+          <label class="label-value" for="justify-between">space-between</label>
+          <div class="separator">;</div>
+        </div>
+
+        <div class="controls__property">
+          <input id="align-items" class="input-property" type="checkbox">
+          <label class="label-property" for="align-items">align-items</label>
+          <div class="separator">:</div>
+
+          <input id="align-stretch" class="input-value" type="radio">
+          <label class="label-value" for="align-stretch">stretch</label>
+          <input id="align-start" class="input-value" type="radio">
+          <label class="label-value" for="align-start">flex-start</label>
+          <input id="align-end" class="input-value" type="radio">
+          <label class="label-value" for="align-end">flex-end</label>
+          <input id="align-center" class="input-value" type="radio">
+          <label class="label-value" for="align-center">center</label>
+          <input id="align-baseline" class="input-value" type="radio">
+          <label class="label-value" for="align-baseline">baseline</label>
+          <div class="separator">;</div>
+        </div>
+
+        <div class="controls__selector">
+          <div class="separator">}</div>
+        </div>
+
       </div>
     </section>
 
