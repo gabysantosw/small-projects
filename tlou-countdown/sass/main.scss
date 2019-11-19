@@ -25,6 +25,9 @@ body {
   background-position: 65% top;
   background-size: auto 100%;
   background-repeat: no-repeat;
+
+  // needed for the overflow hidden to work
+  position: relative;
   overflow: hidden;
 
   // decorative line on top
