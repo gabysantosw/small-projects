@@ -25,7 +25,9 @@ body {
   background-position: 65% top;
   background-size: auto 100%;
   background-repeat: no-repeat;
+  overflow: hidden;
 
+  // decorative line on top
   &::after {
     content: '';
     position: absolute;
@@ -34,6 +36,30 @@ body {
     width: 100%;
     height: .25rem;
     background-color: $primary;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: .25rem;
+    left: 0;
+    width: 100%;
+    height: 95vh;
+    background-color: $dark;
+    z-index: 0;
+
+    transform-origin: bottom;
+
+    animation: reveal-content 4000ms ease-in-out forwards;
+  }
+}
+
+@keyframes reveal-content {
+  0% {
+
+  }
+  100% {
+    transform: scaleY(0);
   }
 }
 
@@ -44,6 +70,7 @@ body {
     width: 12rem;
     margin-top: .25rem;
     opacity: .8;
+    z-index: 2;
   }
 }
 
@@ -53,6 +80,8 @@ body {
   position: absolute;
   right: 0;
   bottom: 5vh;
+
+  animation: reveal-countdown 1000ms 3000ms ease-in-out backwards;
 
   // decorative line
   &::after {
@@ -118,6 +147,19 @@ body {
   }
 }
 
+@keyframes reveal-countdown {
+  0% {
+    opacity: 0;
+    transform: translateX(100vw);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+///
+
 .flame {
   $size: .1rem;
   position: absolute;
@@ -134,10 +176,10 @@ body {
 
 @keyframes blink {
   0%{
-    transform: scale(.1)
+    transform: scale(.1);
   }
 
   100%{
-    transform: scale(1)
+    transform: scale(1);
   }
 }
