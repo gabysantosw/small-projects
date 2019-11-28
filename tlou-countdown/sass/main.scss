@@ -68,7 +68,6 @@ body {
 
 /// === HEADER
 .header {
-  
   &__logo {
     width: 12rem;
     margin-top: .25rem;
@@ -147,6 +146,15 @@ body {
     font-size: 1rem;
     line-height: 1rem;
     opacity: .5;
+
+    animation: reveal-descriptions 500ms ease-in-out backwards;
+    transform-origin: right;
+
+    @for $i from 0 through 3 {
+      &--#{$i} {
+        animation-delay: 4000ms + ($i * 150ms);
+      }
+    }
   }
 }
 
@@ -155,9 +163,24 @@ body {
     opacity: 0;
     transform: translateX(100vw);
   }
+
+  80% {
+    transform: translateX(-2.5vw);
+  }
+
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+
+@keyframes reveal-descriptions {
+  0% {
+    transform: scale(0);
+  }
+
+  100% {
+    transform: scale(1);
   }
 }
 
