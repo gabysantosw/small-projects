@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>For Laia</title>
+
+
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700&display=swap" rel="stylesheet"> 
+  <link rel="stylesheet" href="./css/main.min.css">
+
+  <script defer src="./js/main.js"></script>
+</head>
+<body>
+  <div class="app">
+  
+
+
+  <div id="starting-screen" class="screen js--show-screen">
+    <figure class="screen__figure splash">
+      <p class="splash__text">
+        This is Gaby
+      </p>
+      <p class="splash__text splash__text--right">
+        And this is Laia
+      </p>
+      <img src="./assets/1.svg" alt="" class="splash__image">
+    </figure>
+
+    <p class="screen__description">
+      Help Gaby get to Laia by guessing the words!
+    </p>
+
+    <button id="js-play" class="screen__button">
+      Let's go!
+    </button>
+  </div> <!-- #starting-screen -->
+
+  <div id="playing-screen" class="screen">
+    <figure class="tracker">
+      <img id="js-player" src="./assets/player.svg" alt="" class="tracker__player">
+      <img src="./assets/game.svg" alt="" class="tracker__image">
+    </figure>
+    <p id="js-guess" class="guess">____________</p>
+    <section id="js-keyboard" class="keyboard">
+      <button class="key">
+        <span class="key__text">A</span>
+      </button>
+      <button class="key">
+        <span class="key__text">B</span>
+      </button>
+      <button class="key">
+        <span class="key__text">C</span>
+      </button>
+      <button class="key">
+        <span class="key__text">D</span>
+      </button>
+      <button class="key">
+        <span class="key__text">E</span>
+      </button>
+      <button class="key">
+        <span class="key__text">F</span>
+      </button>
+      <button class="key">
+        <span class="key__text">G</span>
+      </button>
+      <button class="key">
+        <span class="key__text">H</span>
+      </button>
+      <button class="key">
+        <span class="key__text">I</span>
+      </button>
+      <button class="key">
+        <span class="key__text">J</span>
+      </button>
+      <button class="key">
+        <span class="key__text">K</span>
+      </button>
+      <button class="key">
+        <span class="key__text">L</span>
+      </button>
+      <button class="key">
+        <span class="key__text">M</span>
+      </button>
+      <button class="key">
+        <span class="key__text">N</span>
+      </button>
+      <button class="key">
+        <span class="key__text">O</span>
+      </button>
+      <button class="key">
+        <span class="key__text">P</span>
+      </button>
+      <button class="key">
+        <span class="key__text">Q</span>
+      </button>
+      <button class="key">
+        <span class="key__text">R</span>
+      </button>
+      <button class="key">
+        <span class="key__text">S</span>
+      </button>
+      <button class="key">
+        <span class="key__text">T</span>
+      </button>
+      <button class="key">
+        <span class="key__text">U</span>
+      </button>
+      <button class="key">
+        <span class="key__text">V</span>
+      </button>
+      <button class="key">
+        <span class="key__text">W</span>
+      </button>
+      <button class="key">
+        <span class="key__text">X</span>
+      </button>
+      <button class="key">
+        <span class="key__text">Y</span>
+      </button>
+      <button class="key">
+        <span class="key__text">Z</span>
+      </button>
+    </section>
+  </div> <!-- #playing-screen -->
+
+  <div id="lose-screen" class="screen">
+    <figure class="screen__figure">
+      <img src="./assets/lose.svg" alt="" class="screen_image">
+    </figure>
+
+    <p class="screen__description">
+      Oh no! Gaby fell... not that is a surprise, but...
+    </p>
+
+    <button id="js-play-again" class="screen__button">
+      Try again?
+    </button>
+  </div> <!-- #lose-screen -->
+
+  <div id="win-screen" class="screen">
+    <figure class="screen__figure screen__figure--win">
+      <img src="./assets/win.svg" alt="" class="screen__image">
+    </figure>
+
+    <p class="screen__description">
+      PRECIOSA, TE QUIERO INFINITO! Ves? Eres mi superhero hoy y siempre! Lo mejor y mas bonito que me ha pasado! Siempre has estado ahi, tanto en mis caidas (heh!) como levantadas, y todo lo que quiero es hacer lo mismo por ti. TODO CONTIGO, OSITA! *INSERT MANY LOVE EMOJIS*
+    </p>
+  </div> <!-- #win-screen -->
+
+
+
+  </div>
+</body>
+</html>
